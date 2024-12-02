@@ -1,3 +1,17 @@
 <html>
-</htnml>
+<head>
+<title>Change Button Colour </title>
+</head>
+<body>
+<button id="colorButton">Click me to change colour</button>
+<script>
+var button = document.getElementByld('colorButton');
+function changeColor(){
+var randomColor = "#"+ Math.floor(Math.random()*16777215).toString(16):
+button.style.backgroundColor = randomColor;
+}
+button.addEvenntListener("click", changeColor);
+</script>
+</body>
+</html>
 
