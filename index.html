@@ -126,7 +126,7 @@
 <h3 id="Introduction">
   <h2> Introduction</h2>
    <p class="ex1">
-   <pre>
+   <pre id="Introduction_InText">
 
  In today’s online-driven world, many people don’t fully understand the importance of data or misjudge what it can actually do. Often data is seen as just numbers with no significant 
 meaning to them, yet data has the potential to make a real difference. It can save lives, prevent disasters, and protect businesses from financial loss. For instance, data can predict
@@ -143,7 +143,7 @@ valuable data, raising the question: Is data truly valuable, or is it just a mir
   <h3 id="Misconception and Misunderstanding about data">
   <h2> Misconception and Misunderstanding about data</h2>
    <p class="ex1">
-   <pre>
+   <pre id="Misconception_InText">
 <img src="Misconception.png" alt="Figure3" width="900"height"300">
     
  Many People underestimate the importance of data because they don’t see its immediate impact.  To most, data seems like abstract numbers with little connection to real-world problems.
@@ -161,7 +161,7 @@ true value of data is key to making the most of it and not missing out on potent
     <h3 id="Data Worth">
   <h2> Data Worth</h2>
    <p class="ex1">
-   <pre>
+   <pre id="Worth_InText">
 
     
  Data is much more than just a collection of numbers; it holds significant financial and strategic value. Companies like Facebook, Amazon, and Google leverage data to generate enormous
@@ -181,7 +181,7 @@ lead to errors with severe financial or societal consequences. By neglecting the
      <h3 id="Data Processing">
   <h2> Data Processing</h2>
    <p class="ex1">
-   <pre>
+   <pre id="Processing_InText">
 
     
     <img src="Data_Cleaning_Illustration.png" alt="Figure1" width="450"height"300">
@@ -199,7 +199,7 @@ competitive with other big companies.
      <h3 id="Data Attacks">
   <h2> Data Attacks</h2>
    <p class="ex1">
-   <pre>
+   <pre id="Data_InText">
 
     <img src="equifax.png" alt="Figure4" width="900"height"300">
  Data attacks occur for various reasons, mainly driven by the potential financial gain from selling stolen data or using it for fraudulent activities. Some attackers may also be driven by political 
@@ -220,7 +220,7 @@ horse. The exploitation of stolen data can have long-lasting effects on individu
    <h3 id="Conclusion">
     <h2>Conclusion</h2>
     <p class="ex1">
-     <pre>
+     <pre id="Conclusion_InText">
 
       
  In conclusion, data is an invaluable asset, offering both strategic and financial potential. When properly processed, and applied, it can save lives, prevent disasters, and  fuel business growth.
@@ -304,6 +304,71 @@ Federal Trade Commission (FTC). (2019). Equifax Data Breach Settlement</a></h3>
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
-
-
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Data_InText");
+   const WorthCount = displayWordCount("Worth_InText");
+   const MisconceptionCount= displayWordCount("Misconception_InText");
+   const ConclusionCount= displayWordCount("Conclusion_InText");
+   const ProcessingCount= displayWordCount("Processing_InTexct"):
+   
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount + WorthCount + MisconceptionCount + ConclusionCount + ProcessingCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
 </html>
