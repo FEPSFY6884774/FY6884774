@@ -324,13 +324,9 @@ Federal Trade Commission (FTC). (2019). Equifax Data Breach Settlement</a></h3>
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Data_InText");
-   const WorthCount = displayWordCount("Worth_InText");
-   const MisconceptionCount= displayWordCount("Misconception_InText");
-   const ConclusionCount= displayWordCount("Conclusion_InText");
-   const ProcessingCount= displayWordCount("Processing_InText"):
    
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + WorthCount + MisconceptionCount + ConclusionCount + ProcessingCount;
+    const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
